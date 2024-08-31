@@ -25,7 +25,7 @@
 
   /* font sizes */
   --font-size-lg: 18px;
-  --font-size-sm: 14px;
+  --font-size-sm: 16px;
 }
 
 
@@ -35,7 +35,11 @@
 body {
   font-family: "Input Mono", "Open Sans", sans-serif;
   /* color: #9CB8A5 */
+  background-color: #000000; /* Fallback color */
+  background-size: 20px 20px, cover;
+  background-position: top left, center;
 }
+
 
 a {
   color: var(--color-darkblue-100);
@@ -61,6 +65,20 @@ p {
   color: #9CB8A5;
   line-height: 21.6px;
 }
+
+@font-face {
+  font-family: 'Pokemon';
+  src: url('assets/fonts/Pokemon.ttf') format('truetype'); /* Update the path if necessary */
+}
+
+#header .navbar ul li a {
+  font-family: 'Pokemon', sans-serif;
+  font-weight: bold; /* Makes the text bold */
+  font-size: 1.5em; /* Adjust the size as needed */
+  color: #ffffff; /* Optional: Use a color that matches the Pokémon theme */
+  text-shadow: 2px 2px 4px #000000; /* Optional: Add a shadow for effect */
+}
+
 
 /*--------------------------------------------------------------
 # Preloader
@@ -511,10 +529,12 @@ p {
 #hero {
   width: 100%;
   height: 100vh;
-  background: #000a0e;
-  background-image: url("../images/main.jpg");
-  background-repeat: no-repeat;
-  background-size: cover;
+  background-color: #000a0e; /* Fallback color */
+  background-image: 
+    url("data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%2220%22 height=%2220%22 viewBox=%220 0 20 20%22%3E%3Crect width=%2210%22 height=%2210%22 fill=%22%23606dbc%22/%3E%3Crect x=%2210%22 y=%2210%22 width=%2210%22 height=%2210%22 fill=%22%23606dbc%22/%3E%3C/svg%3E"),
+  background-repeat; repeat:var(--color-darkblue-100) no-repeat;
+  background-size: 20px 20px, cover;
+  background-position: top left, center;
 }
 
 
@@ -893,7 +913,7 @@ section {
 }
 
 .table-custom-body .row:nth-child(odd) {
-  background-color:#002A3C;
+  background-color:#000000;
 }
 
 .table-custom-body .row:nth-child(even) {
@@ -906,14 +926,14 @@ section {
 # Roadmap
 --------------------------------------------------------------*/
 #roadmap{
-  background-image: url("../images/roadmap.jpg");
+  background-color: #000000;
       background-repeat: no-repeat;
       background-size: cover;
 }
 
 
 #roadmap .card{
-background-color:#031B25;
+background-color:#000000;
 border-radius: 10px;
 margin-bottom: 20px;
 }
@@ -2198,8 +2218,8 @@ padding: unset;
 }
 
 .square {
-  width: 300px; /* Size of each square */
-  height: 300px; /* Size of each square */
+  width: 200px; /* Size of each square */
+  height: 200px; /* Size of each square */
   overflow: hidden;
 }
 
